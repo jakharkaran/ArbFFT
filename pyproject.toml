@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arbfft"
+version = "0.1.0"
+description = "Arbitrary Precision Fast Fourier Transform in Python"
+readme = "README.md"
+requires-python = ">=3.6"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Your Name", email = "youremail@example.com" }
+]
+keywords = ["FFT", "Fast Fourier Transform", "arbitrary precision", "mpmath"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "mpmath",
+    "numpy"
+]
+
+[project.urls]
+Homepage = "https://github.com/jakharkaran/arbfft"
+Repository = "https://github.com/jakharkaran/arbfft"
+Documentation = "https://github.com/jakharkaran/arbfft#readme"
+
+[tool.setuptools]
+packages = ["arbfft"] 
+include-package-data = true
