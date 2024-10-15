@@ -17,11 +17,6 @@ ArbFFT is a Python package that provides arbitrary precision Fast Fourier Transf
 - [Usage Examples](#usage-examples)
   - [1D FFT Example](#1d-fft-example)
   - [2D FFT Example](#2d-fft-example)
-- [API Reference](#api-reference)
-  - [`fft`](#fft)
-  - [`ifft`](#ifft)
-  - [`fft2`](#fft2)
-  - [`ifft2`](#ifft2)
 - [Performance Considerations](#performance-considerations)
 - [Contributing](#contributing)
 - [License](#license)
@@ -48,8 +43,6 @@ ArbFFT requires Python 3.6 or higher and depends on the `mpmath` library for arb
 
 2. **Install ArbFFT:**
 
-   Navigate to the directory and install the package:
-
    ```bash
    pip install -e ./
    ```
@@ -58,7 +51,7 @@ ArbFFT requires Python 3.6 or higher and depends on the `mpmath` library for arb
 
 ### Setting Precision
 
-Before performing computations, set the desired precision using `mpmath`:
+Set the desired precision using `mpmath`:
 
 ```python
 from mpmath import mp
@@ -131,65 +124,6 @@ print("\nRecovered Data after 2D IFFT:")
 for row in ifft2_result:
     print(row)
 ```
-
-## API Reference
-
-### `fft`
-
-```python
-fft(x, inverse=False)
-```
-
-Performs the one-dimensional FFT on a list of `mpmath` complex numbers.
-
-- **Parameters:**
-  - `x`: List of `mpmath.mpc` complex numbers. The length of the list must be a power of two.
-  - `inverse` (optional): Boolean flag to perform the inverse FFT. Default is `False`.
-
-- **Returns:**
-  - List of `mpmath.mpc` complex numbers representing the FFT of the input.
-
-### `ifft`
-
-```python
-ifft(x)
-```
-
-Performs the one-dimensional inverse FFT on a list of `mpmath` complex numbers.
-
-- **Parameters:**
-  - `x`: List of `mpmath.mpc` complex numbers. The length of the list must be a power of two.
-
-- **Returns:**
-  - List of `mpmath.mpc` complex numbers representing the inverse FFT of the input.
-
-### `fft2`
-
-```python
-fft2(matrix)
-```
-
-Performs the two-dimensional FFT on a matrix (list of lists) of `mpmath` complex numbers.
-
-- **Parameters:**
-  - `matrix`: 2D list (list of lists) of `mpmath.mpc` complex numbers. Both dimensions must be powers of two.
-
-- **Returns:**
-  - 2D list of `mpmath.mpc` complex numbers representing the 2D FFT of the input.
-
-### `ifft2`
-
-```python
-ifft2(matrix)
-```
-
-Performs the two-dimensional inverse FFT on a matrix (list of lists) of `mpmath` complex numbers.
-
-- **Parameters:**
-  - `matrix`: 2D list (list of lists) of `mpmath.mpc` complex numbers. Both dimensions must be powers of two.
-
-- **Returns:**
-  - 2D list of `mpmath.mpc` complex numbers representing the 2D inverse FFT of the input.
 
 ## Performance Considerations
 
