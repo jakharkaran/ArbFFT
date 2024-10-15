@@ -38,30 +38,21 @@ ArbFFT is a Python package that provides arbitrary precision Fast Fourier Transf
 
 ArbFFT requires Python 3.6 or higher and depends on the `mpmath` library for arbitrary precision arithmetic.
 
-1. **Install mpmath:**
-
-   ```bash
-   pip install mpmath
-   ```
-
-2. **Download ArbFFT:**
+1. **Clone ArbFFT:**
 
    Clone the repository or download the source code:
 
    ```bash
-   git clone https://github.com/yourusername/arbfft.git
+   git clone https://github.com/jakharkaran/arbfft.git
    ```
 
-3. **Install ArbFFT:**
+2. **Install ArbFFT:**
 
    Navigate to the directory and install the package:
 
    ```bash
-   cd arbfft
-   python setup.py install
+   pip install -e ./
    ```
-
-*Note: Replace `yourusername` with your GitHub username or the appropriate repository link.*
 
 ## Getting Started
 
@@ -74,21 +65,14 @@ from mpmath import mp
 mp.dps = 50  # Set precision to 50 decimal places
 ```
 
-### FFT and IFFT
+### FFT, IFFT for 2D and FFT2, IFFT2 for 2D transforms
 
 Import the ArbFFT functions:
 
 ```python
-from arbfft import fft, ifft
+from arbfft import fft, ifft, fft2, ifft2
 ```
 
-### 2D FFT and IFFT
-
-For two-dimensional transforms:
-
-```python
-from arbfft import fft2, ifft2
-```
 
 ## Usage Examples
 
